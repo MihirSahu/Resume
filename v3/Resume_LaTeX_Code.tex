@@ -1,0 +1,275 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+% Command I created for CougarCS, for which I've held multiple positions
+\newcommand{\resumeSubheadingTwoRoles}[6]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+      \textit{\small#5} & \textit{\small #6} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Mihir Sahu} \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 832-857-8060 ~ \href{mailto:2002mihir@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  2002mihir@gmail.com} ~ 
+    \href{https://linkedin.com/in/the-mihir-sahu}{\raisebox{-0.2\height}\faLinkedin\ the-mihir-sahu}  ~
+    \href{https://github.com/MihirSahu}{\raisebox{-0.2\height}\faGithub\ MihirSahu} ~
+    \href{https://mihirsahu.com}{\raisebox{-0.2\height}\faGlobeAmericas\ mihirsahu.com}
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {College of Natural Sciences and Mathematics, University of Houston}{August 2020 -- May 2024}
+      {Bachelor of Science in Computer Science}{Houston, Texas}
+    \resumeSubheading
+      {C.T. Bauer College of Business, University of Houston}{August 2020 -- May 2024}
+      {Bachelor of Business Administration in Finance}{Houston, Texas}
+  \resumeSubHeadingListEnd
+  
+\begin{comment}
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item\small Data Structures
+                \item Software Methodology
+                \item Algorithms Analysis
+                \item Database Management
+                \item Artificial Intelligence
+                \item Internet Technology
+                \item Systems Programming
+                \item Computer Architecture
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+\end{comment}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python, C/C++, HTML/CSS, JavaScript, TypeScript, SQL, R, Bash, Powershell} \\
+     \textbf{Developer Tools}{: Linux, VS Code, Vim, Emacs, Git, Docker, AWS, Jira, Agile Methodologies} \\
+     \textbf{Technologies/Frameworks}{: Flask, Selenium, React.js, Next.js, Node.js, Postman, TailwindCSS, Supabase} \\
+    \textbf{Offensive/Defensive Security Tools}{: Metasploit, Burp Suite, Nmap, Wireshark, Ghidra, GDB+GEF, Radare2} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+\begin{comment}  
+    \resumeSubheading
+      {Chevron}{November 2022 -- Present}
+      {Incoming Software Engineer Intern}{Houston, Texas}
+%      \resumeItemListStart
+%      \resumeItemListEnd
+\end{comment}      
+    \resumeSubheading
+      {Seatgull}{February 2022 -- October 2022}
+      {Software Engineer}{Houston, Texas}
+      \resumeItemListStart
+        \resumeItem{Worked on an application with other students to provide an easy and efficient way to enroll for classes}
+        \resumeItem{Used Rust’s Actix framework to create a fast, asynchronous backend while providing a responsive front-end with React}
+        \resumeItem{Designed and created a course scheduler connected to 60 universities with over 850,000 students through React.js}
+        \resumeItem{Spearheaded Reddit marketing by creating posts on 20+ subreddits and reached out to 50+ influencers on Instagram}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Neuhaus Education Center}{June 2019 -- August 2019}
+      {Content Intern}{Houston, Texas}
+      \resumeItemListStart
+        \resumeItem{Located, updated, and converted 61 Lessonets [flash programs] and 88 videos to non-Flash formats}
+        \resumeItem{Updated Welcome pages across 17 online classes on the CMS website}
+        \resumeItem{Edited and produced 16 new videos using Camtasia}
+        \resumeItem{Added 32 digital activity pages in Neuhaus Academy and verified with additions the 68 pre-existing digital activity pages}
+    \resumeItemListEnd
+    
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+
+%-----------INVOLVEMENT---------------
+\section{Leadership}
+    \resumeSubHeadingListStart
+        \resumeSubheadingTwoRoles{CougarCS}{August 2021 -- Present}{President}{December 2022 - Present}{Director of Information Security}{December 2021 - December 2021}
+            \resumeItemListStart
+                \resumeItem{Supervised a team of 20 to compete against other universities in CTF competitions by using common pentesting tools}
+                \resumeItem{Facilitated the creation of VM, Linux, and Password Cracking workshops to teach students about popular technologies}
+                \resumeItem{Created 40+ interactive step-by-step writeups for CTF rooms on TryHackMe using Markdown}
+            \resumeItemListEnd
+        \resumeSubheading{CodeRED Odyssey Hackathon}{June 2022 -- November 2022}{Marketing Officer}{}
+            \resumeItemListStart
+                \resumeItem{Organized Houston’s largest hackathon’s 8th iteration – CodeRED Odyssey (MLH event) over a period of 5 months}
+                \resumeItem{Marketed the event on a regular basis on and off campus, as well as on social media such as LinkedIn and Instagram}
+                \resumeItem{Helped set up, organize, manage, and clean up over the entire 24-hour event}
+            \resumeItemListEnd
+        
+    \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-5pt}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Recharge} $|$ \emph{TypeScript, React Native, JSX, Figma, Actix, MariaDB, Docker, AWS}}{June 2022 -- August 2022}
+          \resumeItemListStart
+            \resumeItem{Created a full stack mobile app for IOS and Android to allow the UH community to find activities around campus}
+            \resumeItem{Designed using Figma for UI/UX development to create designs for 10+ mobile app pages}
+            \resumeItem{Utilized React Native with custom styling components for front-end development and Actix for back-end development}
+            \resumeItem{Programmed a website using Vite and TailwindCSS, and hosted it on an Oracle Cloud VM with Nginx reverse proxy}
+          \resumeItemListEnd
+          \vspace{-13pt}
+      \resumeProjectHeading
+          {\textbf{Robotic Arm} $|$ \emph{3D Printing, TypeScript, Node.js, Express JS, Arduino}}{February 2022 -- May 2022}
+          \resumeItemListStart
+            \resumeItem{Designed and 3D printed a mechanical robot arm to simulate joints and muscle movement in an agile environment}
+            \resumeItem{Hosted a website using Node.js and connected it with Arduino IDE}
+            \resumeItem{Used OpenCV to identify colored objects using gaussian blurring and move the robotic arm}
+          \resumeItemListEnd 
+          \vspace{-13pt}
+          \resumeProjectHeading
+          {\textbf{Home Server} $|$ \emph{Docker, Python, Plex, Wireguard, Tailscale, Pi-Hole, etc.}}{August 2021 -- Present}
+          \resumeItemListStart
+            \resumeItem{Installed Raspbian on a Raspberry Pi, set up SSH, and self-hosted with Plex Media Server, the Wireguard VPN client, the Nextcloud suite, and Pi-Hole using Docker containers}
+            \resumeItem{Scripted a scheduler in Python using the pandas and datetime modules to integrate with a Google Sheets calendar and send push notifications based on server temperature and upcoming dates/times}
+            \resumeItem{Utilized Portainer and Docker to organize and host 20+ containers organized into 3 stacks with 10 volumes in total}
+          \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+
+%
+
+\end{document}
