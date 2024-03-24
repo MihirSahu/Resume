@@ -20,6 +20,7 @@
 \usepackage{tabularx}
 \usepackage{fontawesome5}
 \usepackage{multicol}
+\usepackage{tikz}
 \setlength{\multicolsep}{-3.0pt}
 \setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
@@ -47,7 +48,7 @@
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
+\addtolength{\topmargin}{-.8in}
 \addtolength{\textheight}{1.4in}
 
 \urlstyle{same}
@@ -120,6 +121,27 @@
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -133,11 +155,15 @@
 % \end{tabular*}
 
 \begin{center}
+    \texttt{mihir@resume:$\sim$ \$ whoami} \\ \vspace{16pt}
     {\Huge \scshape Mihir Sahu} \\ \vspace{1pt}
-    \small \raisebox{-0.1\height}\faPhone\ 832-857-8060 ~ \href{mailto:2002mihir@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  2002mihir@gmail.com} ~ 
-    \href{https://linkedin.com/in/the-mihir-sahu}{\raisebox{-0.2\height}\faLinkedin\ the-mihir-sahu}  ~
-    \href{https://github.com/MihirSahu}{\raisebox{-0.2\height}\faGithub\ MihirSahu} ~
+    \small Houston, Texas, US \\ \vspace{4pt}
+    \small \raisebox{-0.1\height}\faPhone\ +1 (832) 857-8060 ~ \href{mailto:2002mihir@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  2002mihir@gmail.com} ~ 
+    \href{https://linkedin.com/in/the-mihir-sahu}{\raisebox{-0.2\height}\faLinkedin\ linkedin.com/in/the-mihir-sahu \ExternalLink}  ~
+    \href{https://github.com/MihirSahu}{\raisebox{-0.2\height}\faGithub\ github.com/MihirSahu \ExternalLink} ~
+    \begin{comment}
     \href{https://mihirsahu.com}{\raisebox{-0.2\height}\faGlobeAmericas\ mihirsahu.com}
+    \end{comment}
     \vspace{-8pt}
 \end{center}
 
@@ -146,11 +172,11 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {College of Natural Sciences and Mathematics, University of Houston}{August 2020 -- December 2024}
-      {Bachelor of Science in Computer Science}{Houston, Texas}
+      {College of Natural Sciences and Mathematics, University of Houston}{Houston, TX}
+      {Bachelor of Science in Computer Science}{August 2020 -- December 2024}
     \resumeSubheading
-      {C.T. Bauer College of Business, University of Houston}{August 2020 -- December 2024}
-      {Bachelor of Business Administration in Finance}{Houston, Texas}
+      {C.T. Bauer College of Business, University of Houston}{Houston, TX}
+      {Bachelor of Business Administration in Finance}{August 2020 -- December 2024}
   \resumeSubHeadingListEnd
   
 \begin{comment}
@@ -177,9 +203,9 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, C/C++, HTML/CSS, JavaScript, TypeScript, SQL, R, Bash, Powershell} \\
-     \textbf{Developer Tools}{: Linux, VS Code, Vim, Emacs, Git, Docker, AWS, Jira, Agile Methodologies} \\
-     \textbf{Technologies/Frameworks}{: Flask, Selenium, React.js, Next.js, Node.js, Postman, TailwindCSS, Supabase} \\
+     \textbf{Languages}{: Python, C/C++, HTML/CSS, JavaScript, TypeScript, SQL} \\
+    \textbf{Technologies}{: React, Node.js, TailwindCSS, MySQL, MariaDB, Supabase} \\
+     \textbf{Cloud Platforms}{: Amazon Web Services, Microsoft Azure} \\
      \begin{comment} 
     \textbf{Offensive/Defensive Security Tools}{: Metasploit, Burp Suite, Nmap, Wireshark, Ghidra, GDB+GEF, Radare2} \\
     \end{comment}  
@@ -199,35 +225,42 @@
 %      \resumeItemListEnd
 \end{comment}      
     \resumeSubheading
-      {BidOut}{September 2023 -- December 2023}
-      {Project Management Assistant}{Houston, Texas}
+      {\href{https://bidout.app/}{BidOut/Breaker19 \ExternalLink}}{Houston, TX}
+      {Project Management Assistant}{September 2023 -- December 2023}
         \resumeItemListStart
-        \resumeItem{Managed the product launch of Breaker19, an oil and gas transportation service, including web and mobile applications}
-        \resumeItem{Worked with developers for quality assurance, resulting in a reduction of bugs and a final product suitable for launch}
-        \resumeItem{Designed the infrastructure and user interface of a mobile app for future launch, taking technological challenges and logistical issues into account}
+        \resumeItem{Led the product launch of \href{https://www.breaker19.app/}{Breaker19 \ExternalLink}, an oil and gas transportation service, including web and mobile applications}
+        \resumeItem{Oversaw developers and reduced bugs by 30\% by conducting code reviews and quality assurance tests}
+        \resumeItem{Designed the user interface of a mobile app for future launch by wireframing 15+ screens on Figma}
       \resumeItemListEnd
       
     \resumeSubheading
-      {Chevron}{May 2023 -- August 2023}
-      {Cloud and Infrastructure Intern}{Houston, Texas}
+      {Chevron}{Houston, TX}
+      {Cloud and Infrastructure Intern}{May 2023 -- August 2023}
         \resumeItemListStart
-        \resumeItem{Built a full-stack web app with Next.js and TailwindCSS/MantineUI to allow users to report major incidents with widespread impacts}
-        \resumeItem{Assisted in conducting exploratory work to build an AI model with ServiceNow Incident and Knowledge Base articles}
-        \resumeItem{Worked with a team of interns to create a Cloud and Infrastructure learning pathway for employees on an internal learning platform}
+        \resumeItem{Constructed a full-stack web app with Next.js and TailwindCSS/MantineUI to allow 8,000+ employees to report major incidents with widespread impacts}
+        \resumeItem{Assisted in conducting exploratory work to build an AI model with ServiceNow Incident and Knowledge Base articles, aiming to reduce internal tech support waiting times by 30\%}
+        \resumeItem{Prepared a Cloud and Infrastructure learning pathway for employees on an internal learning platform, targeting a 25\% improvement in employee training times}
       \resumeItemListEnd
       
     \resumeSubheading
-      {Seatgull}{February 2022 -- October 2022}
-      {Software Engineer}{Houston, Texas}
+      {Seatgull}{Houston, TX}
+      {Software Engineer}{February 2022 -- October 2022}
       \resumeItemListStart
-        \resumeItem{Used Rust’s Actix framework to create a fast, asynchronous backend while providing a responsive front-end with React}
-        \resumeItem{Designed and created a course scheduler connected to 60 universities with over 850,000 students through React.js}
-        \resumeItem{Spearheaded Reddit marketing by creating posts on 20+ subreddits and reached out to 50+ influencers on Instagram}
+        \resumeItem{Utilized Rust’s Actix framework to create an asynchronous back-end while providing a responsive front-end with React}
+        \resumeItem{Conceptualized a course scheduler with React to connect to 60+ universities with over 850,000 students}
+        \resumeItem{Spearheaded marketing and lead generation by creating posts on 20+ subreddits and collaborating with 50+ influencers on Instagram}
       \resumeItemListEnd
+
+    \resumeSubheadingTwoRoles{\href{https://cougarcs.com/}{CougarCS \ExternalLink}}{Houston, TX}{President}{December 2022 - December 2023}{Director of Information Security}{December 2021 - December 2021}
+        \resumeItemListStart
+            \resumeItem{Organized a team of 20 to compete against over 50 universities in capture-the-flag competitions by using 15+ penetration testing tools, including Metasploit and Burp Suite}
+            \resumeItem{Facilitated the creation of 3 workshops to teach students about common cybersecurity concepts, resulting in 50+ joining the cybersecurity team}
+            \resumeItem{Created 40+ interactive step-by-step writeups for capture-the-flag rooms on TryHackMe using Markdown, making it easier for beginners to enter the field}
+        \resumeItemListEnd
   \resumeSubHeadingListEnd
 \vspace{-16pt}
 
-
+\begin{comment}
 %-----------INVOLVEMENT---------------
 \section{Leadership}
     \resumeSubHeadingListStart
@@ -239,27 +272,29 @@
                 \resumeItem{Created 40+ interactive step-by-step writeups for CTF rooms on TryHackMe using Markdown}
             \resumeItemListEnd
     \resumeSubHeadingListEnd
-
+\end{comment}
 
 %-----------PROJECTS-----------
 \section{Projects}
     \vspace{-5pt}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Recharge} $|$ \emph{TypeScript, React Native, JSX, Figma, Actix, MariaDB, Docker, AWS}}{June 2022 -- August 2022}
+          {\textbf{\href{https://github.com/Recharge-App}{Recharge \ExternalLink}} $|$ \emph{TypeScript, React Native, Figma, Actix, MariaDB, Amazon Web Services}}{June 2022 -- August 2022}
           \resumeItemListStart
-            \resumeItem{Created a full stack mobile app for IOS and Android to allow the UH community to find activities around campus}
-            \resumeItem{Designed using Figma for UI/UX development to create designs for 10+ mobile app pages}
+            \resumeItem{Developed a full stack mobile app for IOS and Android to allow the UH community to find activities around campus}
+            \resumeItem{Designed 10+ mobile app pages using Figma for a seamless user experience}
             \resumeItem{Utilized React Native with custom styling components for front-end development and Actix for back-end development}
             \resumeItem{Programmed a website using Vite and TailwindCSS, and hosted it on an Oracle Cloud VM with Nginx reverse proxy}
           \resumeItemListEnd
           \vspace{-13pt}
         \resumeProjectHeading
-          {\textbf{Home Server} $|$ \emph{Docker, Python, Plex, Wireguard, Tailscale, Pi-Hole, etc.}}{August 2021 -- Present}
+          {\textbf{\href{https://github.com/MihirSahu/Personal-Configs}{Home Lab \ExternalLink}} $|$ \emph{Docker, Python, Plex, Wireguard, Tailscale, Pi-Hole, etc.}}{August 2021 -- Present}
           \resumeItemListStart
             \resumeItem{Installed Raspbian on a Raspberry Pi, set up SSH, and self-hosted with Plex Media Server, the Wireguard VPN client, the Nextcloud suite, and Pi-Hole using Docker containers}
+            \begin{comment}
             \resumeItem{Scripted a scheduler in Python using the Pandas and Datetime modules to integrate with a Google Sheets calendar and send push notifications based on server temperature and upcoming dates/times}
-            \resumeItem{Utilized Portainer and Docker to organize and host 20+ containers organized into 3 stacks with 10 volumes in total}
+            \end{comment}
+            \resumeItem{Operated Portainer and Docker to organize and host 20+ containers organized into 3 stacks with 10 volumes in total}
           \resumeItemListEnd 
     \resumeSubHeadingListEnd
 \vspace{-15pt}
